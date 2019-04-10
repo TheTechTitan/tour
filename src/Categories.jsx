@@ -8,10 +8,10 @@ import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 import wild from "./Photos/harsh-tank-279712-unsplash.jpg";
-import heritage from "./Photos/._sander-don-1067759-unsplash.jpg";
-import scenery from "./Photos/._daniel-klein-573630-unsplash.jpg";
-import event from "./Photos/._shaun-salmon-1271866-unsplash.jpg";
-import adventure from "./Photos/._filipp-nekhaev-58681-unsplash.jpg";
+import heritage from "./Photos/sander-don-1067759-unsplash.jpg";
+import scenery from "./Photos/daniel-klein-573630-unsplash.jpg";
+import event from "./Photos/shaun-salmon-1271866-unsplash.jpg";
+import adventure from "./Photos/filipp-nekhaev-58681-unsplash.jpg";
 import {TouchRippleProps as center} from "@material-ui/core/ButtonBase/TouchRipple";
 
 const tileData = [
@@ -87,14 +87,14 @@ const styles = theme => ({
 });
 
 
-function AdvancedGridList(props) {
+function Categories(props) {
     const { classes } = props;
 
     return (
         <div className={classes.root}>
             <GridList className={classes.gridList} cols={4} rows={2}>
                 {tileData.map(tile => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1}  rows={tile.featured ? 1 : 3} >
+                    <GridListTile key={tile.img} cols={tile.cols || 2}  rows={tile.featured ? 1 : 3} >
                         <img src={tile.img} alt ={""}/>
                         <GridListTileBar
                             title={tile.title}
@@ -114,8 +114,8 @@ function AdvancedGridList(props) {
     );
 }
 
-AdvancedGridList.propTypes = {
+Categories.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AdvancedGridList);
+export default withStyles(styles)(Categories);

@@ -50,7 +50,7 @@ class UserForm extends Component {
         return(
 
             <div>
-                <br/>   
+                <br/>
                 <form noValidate>
                     <h2>Explore Sri lanka</h2>
                     <p>Find the best deals for your travel around Sri Lanka. An Island full of adventures to mark your most memorable memory.</p>
