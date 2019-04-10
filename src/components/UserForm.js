@@ -49,12 +49,12 @@ class UserForm extends Component {
         console.log(this.state.where);
         return(
 
-            <div>
+            <div style={{marginLeft:50, borderBlock:1, borderBlockColor: 'black'}}>
                 <br/>
                 <form noValidate>
                     <h2>Explore Sri lanka</h2>
-                    <p>Find the best deals for your travel around Sri Lanka. An Island full of adventures to mark your most memorable memory.</p>
-                    <TextField
+                    <p>Find the best deals for your travel around Sri Lanka. <br/>An Island full of adventures to mark your most memorable memory.</p>
+                    <TextField style={{width:400}}
                         id="where"
                         variant="outlined"
                         label="Where"
@@ -72,7 +72,7 @@ class UserForm extends Component {
                         onChange={this.handleChange('checkIn')}
                     />
 
-                    <TextField
+                    <TextField style={{marginLeft:45}}
                         id="checkOut"
                         label="checkOut"
                         type="date"
@@ -91,7 +91,7 @@ class UserForm extends Component {
                         }}*/
                     />
 
-                    <TextField
+                    <TextField style={{marginLeft:5}}
                         id="children"
                         variant="outlined"
                         label="Children"
@@ -101,8 +101,8 @@ class UserForm extends Component {
                     />
                     <br/><br/>
 
-                    <Button variant="contained" color="primary">
-                        Primary
+                    <Button variant="contained" color="primary" style={{backgroundColor:"green", color:"white", width:400, height:50}}>
+                        Search
                     </Button>
 
 

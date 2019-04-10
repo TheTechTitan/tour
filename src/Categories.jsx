@@ -14,6 +14,11 @@ import event from "./Photos/shaun-salmon-1271866-unsplash.jpg";
 import adventure from "./Photos/filipp-nekhaev-58681-unsplash.jpg";
 import {TouchRippleProps as center} from "@material-ui/core/ButtonBase/TouchRipple";
 
+const divStyle = {
+
+    margin: 'auto'
+
+}
 const tileData = [
     {
         img: wild,
@@ -91,7 +96,7 @@ function Categories(props) {
     const { classes } = props;
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} style={divStyle}>
             <GridList className={classes.gridList} cols={4} rows={2}>
                 {tileData.map(tile => (
                     <GridListTile key={tile.img} cols={tile.cols || 2}  rows={tile.featured ? 1 : 3} >
