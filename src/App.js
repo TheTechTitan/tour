@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import OutlinedInputAdornments from './OutlinedInputAdornments'
 import NavigationBar from './NavigationBar.js'
+import UserForm from './components/UserForm.js'
 
 class App extends Component {
   render() {
@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <NavigationBar/>
         <div className="App-header">
-          <OutlinedInputAdornments/>
+          <UserForm/>
         </div>
       </div>
     );

@@ -1,17 +1,27 @@
 import React,{Component} from 'react';
-import classNames from 'classnames';
-import AppBar from '@material-ui/core/AppBar';
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+// import PropTypes from 'prop-types';
+// import classNames from 'classnames';
+// import AppBar from '@material-ui/core/AppBar';
+// import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+// import Toolbar from '@material-ui/core/Toolbar';
+// import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
+//
+// import { withStyles } from '@material-ui/core/styles';
+// import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 
+
+// const styles = theme => ({
+//     button: {
+//         margin: theme.spacing.unit,
+//     },
+//     input: {
+//         display: 'none',
+//     },
+// });
 
 class UserForm extends Component {
 
@@ -32,17 +42,18 @@ class UserForm extends Component {
 
     render() {
 
-        const values= {firstName: '', lastName: '', checkIn: '',checkOut: '',date: ''}
-
-        const { classes } = this.props;
+        // const values= {firstName: '', lastName: '', checkIn: '',checkOut: '',date: ''}
+        //
+        // const { classes } = this.props;
 
         console.log(this.state.where);
         return(
 
             <div>
-                <form styles={{border:1}} noValidate>
-                    <h2>Tour Sri lanka</h2>
-                    <h4>blah blah</h4>
+                <br/>   
+                <form noValidate>
+                    <h2>Explore Sri lanka</h2>
+                    <p>Find the best deals for your travel around Sri Lanka. An Island full of adventures to mark your most memorable memory.</p>
                     <TextField
                         id="where"
                         variant="outlined"
@@ -51,7 +62,7 @@ class UserForm extends Component {
                             startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
                         }}*/
                     />
-                    <br/>
+                    <br/><br/>
 
                     <TextField
                         id="checkIn"
@@ -69,7 +80,7 @@ class UserForm extends Component {
                         onChange={this.handleChange('checkOut')}
                     />
 
-                    <br/>
+                    <br/><br/>
 
                     <TextField
                         id="adult"
@@ -88,6 +99,13 @@ class UserForm extends Component {
                             startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
                         }}*/
                     />
+                    <br/><br/>
+
+                    <Button variant="contained" color="primary">
+                        Primary
+                    </Button>
+
+
                 </form>
             </div>
 
@@ -95,5 +113,9 @@ class UserForm extends Component {
 
     }
 }
+
+// UserForm.propTypes = {
+//     classes: PropTypes.object.isRequired,
+// };
 
 export default UserForm;
